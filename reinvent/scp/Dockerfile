@@ -1,4 +1,5 @@
-FROM continuumio/anaconda3:5.0.1
+FROM continuumio/miniconda3:4.3.27
 
-RUN /opt/conda/bin/conda install -y jupyter
-RUN /opt/conda/bin/conda install -y pytorch torchvision -c pytorch
+RUN conda install -y -q jupyter
+RUN conda install -y -q pytorch torchvision -c pytorch
+RUN conda install -y -q rdkit -c rdkit
