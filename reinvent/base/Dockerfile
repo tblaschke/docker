@@ -14,8 +14,8 @@ WORKDIR /app
 # Install requirements
 COPY environment.yml /app/environment.yml
 
-RUN conda-env create -n my_app -f /app/environment.yml  && rm -rf /opt/conda/pkgs/*
+RUN conda-env create -n app -f /app/environment.yml  && rm -rf /opt/conda/pkgs/*
 RUN chown -R myuser:myuser /app/*
 
 # activate the myapp environment
-ENV PATH /opt/conda/envs/myapp/bin:$PATH
+ENV PATH /opt/conda/envs/app/bin:$PATH
