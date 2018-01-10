@@ -1,2 +1,2 @@
-FROM tblaschke/reinvent:base
+FROM tblaschke/reinvent:base.lastest
 
