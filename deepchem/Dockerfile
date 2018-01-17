@@ -9,6 +9,9 @@ RUN apt-get update && apt-get install -y \
 
 RUN groupadd -r myuser && useradd -r -g myuser myuser
 
+#add the scratch partition (for HPC env)
+RUN mkdir /scratch
+
 WORKDIR /app
 
 # Install requirements
